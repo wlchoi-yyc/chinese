@@ -1,42 +1,61 @@
-<!DOCTYPE html><html lang="zh-Hant">
+<!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>中文科學習資源庫</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>中文科學習資源庫首頁</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom, #f3e5dc, #fefae0);
-      font-family: 'Noto Sans TC', sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      font-family: "DFKai-SB", "標楷體", "KaiTi", "STKaiti", serif;
+      background-image: url("images/background_books.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #222;
     }
+
+    .wrapper {
+      background-color: rgba(255, 255, 255, 0.88);
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
     h1 {
-      font-size: 2.5em;
+      text-align: center;
+      font-size: 2rem;
       margin-bottom: 30px;
-      color: #333;
     }
+
     .enter-button {
-      padding: 15px 30px;
-      font-size: 1.2em;
-      background-color: #e29578;
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
+      padding: 12px 24px;
+      font-size: 1.2rem;
+      background-color: #4b7b5a;
       color: white;
       border: none;
-      border-radius: 8px;
-      cursor: pointer;
+      border-radius: 10px;
+      text-decoration: none;
+      text-align: center;
       transition: background-color 0.3s;
     }
+
     .enter-button:hover {
-      background-color: #c27156;
+      background-color: #3a6146;
     }
   </style>
 </head>
 <body>
-  <h1>中文科學習資源庫</h1>
-  <button class="enter-button" onclick="location.href='main.html'">進入</button>
+  <div class="wrapper">
+    <h1>中文科學習資源庫</h1>
+    <a href="main.html" class="enter-button">進入主目錄</a>
+  </div>
 </body>
 </html>
