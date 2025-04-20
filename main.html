@@ -7,16 +7,21 @@
   <link rel="stylesheet" href="style.css" />
   <script defer src="theme.js"></script>
   <style>
+    body {
+      font-family: "DFKai-SB", "標楷體", "KaiTi", "STKaiti", serif;
+    }
+
     .header {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       gap: 10px;
+      margin-bottom: 20px;
     }
 
     .header h1 {
-      font-size: clamp(1.5rem, 5vw, 2.5rem);
+      font-size: 1.8rem;
       margin: 0;
     }
 
@@ -30,29 +35,32 @@
       cursor: pointer;
     }
 
-    .level-list {
-      font-size: 1.4rem;
+    h2 {
+      font-size: 1.8rem;
       margin-top: 40px;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      gap: 20px;
-      padding: 20px 0;
+    .grid-row {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 20px 0;
     }
 
-    .grid a {
-      text-align: center;
-      display: inline-block;
+    .grid-row a {
+      font-size: 1.2rem;
       font-weight: bold;
+      text-decoration: underline;
+      color: #4b0082;
     }
 
     .back-home {
       margin-top: 40px;
       display: block;
       text-align: center;
-      font-size: 1rem;
+      font-size: 1.2rem;
+      color: #4b0082;
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -62,20 +70,18 @@
     <button id="modeToggle" class="toggle-btn">切換日／夜模式</button>
   </div>
 
-  <div class="level-list">
-    <h2>初中課文</h2>
-    <div class="grid">
-      <a href="form1/index.html">中一</a>
-      <a href="form2/index.html">中二</a>
-      <a href="form3/index.html">中三</a>
-    </div>
+  <h2>初中課文</h2>
+  <div class="grid-row">
+    <a href="form1/index.html">中一</a>
+    <a href="form2/index.html">中二</a>
+    <a href="form3/index.html">中三</a>
+  </div>
 
-    <h2>高中課文</h2>
-    <div class="grid">
-      <a href="form4/index.html">中四</a>
-      <a href="form5/index.html">中五</a>
-      <a href="form6/index.html">中六</a>
-    </div>
+  <h2>高中課文</h2>
+  <div class="grid-row">
+    <a href="form4/index.html">中四</a>
+    <a href="form5/index.html">中五</a>
+    <a href="form6/index.html">中六</a>
   </div>
 
   <a href="index.html" class="back-home">← 返回首頁</a>
