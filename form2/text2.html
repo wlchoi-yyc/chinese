@@ -13,6 +13,15 @@
       position: absolute; top: 0; left: 0;
       width: 100%; height: 100%;
     }
+    .download-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -29,19 +38,10 @@
   </div>
 
   <div class="section">
-  <h2>筆記 PDF 預覽</h2>
-  <div id="pdf-viewer"></div>
-</div>
-
-<script>
-  const viewer = document.getElementById('pdf-viewer');
-  const pdfUrl = "../notes/form2_text2.pdf";
-  const isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent);
-
-  viewer.innerHTML = isMobile
-    ? `<iframe src="https://docs.google.com/gview?url=https://wlchoi-yyc.github.io/chinese/notes/form2_text2.pdf&embedded=true" style="width:100%; height:600px;" frameborder="0"></iframe>`
-    : `<iframe src="${pdfUrl}" style="width:100%; height:600px;" frameborder="0"></iframe>`;
-</script>
+    <h2>筆記 PDF 預覽</h2>
+    <div id="pdf-viewer"></div>
+    <a href="../notes/form2_text2.pdf" download class="download-btn">下載 PDF 筆記</a>
+  </div>
 
   <div class="section">
     <h2>教學影片</h2>
@@ -51,5 +51,15 @@
   </div>
 
   <a class="back" href="index.html">← 返回中二課文目錄</a>
+
+  <script>
+    const viewer = document.getElementById('pdf-viewer');
+    const pdfUrl = "../notes/form2_text2.pdf";
+    const isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent);
+
+    viewer.innerHTML = isMobile
+      ? `<iframe src="https://docs.google.com/gview?url=https://wlchoi-yyc.github.io/chinese/notes/form2_text2.pdf&embedded=true" style="width:100%; height:600px;" frameborder="0"></iframe>`
+      : `<iframe src="${pdfUrl}" style="width:100%; height:600px;" frameborder="0"></iframe>`;
+  </script>
 </body>
 </html>
