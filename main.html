@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中文科學習資源庫｜主頁</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #fffaf5;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    h1 {
+      font-size: 1.8em;
+    }
+    .mode-toggle {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 5px;
+      background-color: #e29578;
+      color: white;
+      cursor: pointer;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px 0;
+    }
+    .grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+    .grid img:hover {
+      transform: scale(1.05);
+    }
+    .section-title {
+      font-size: 1.5em;
+      margin-top: 40px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      margin-top: 40px;
+      padding: 20px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>中文科學習資源庫</h1>
+    <button class="mode-toggle" id="toggle-mode">切換日／夜模式</button>
+  </header>  <section class="section-title">初中課文</section>
+  <div class="grid">
+    <a href="form1/index.html"><img src="covers/form1.jpg" alt="中一"></a>
+    <a href="form2/index.html"><img src="covers/form2.jpg" alt="中二"></a>
+    <a href="form3/index.html"><img src="covers/form3.jpg" alt="中三"></a>
+  </div>  <section class="section-title">高中課文</section>
+  <div class="grid">
+    <a href="form4/index.html"><img src="covers/form4.jpg" alt="中四"></a>
+    <a href="form5/index.html"><img src="covers/form5.jpg" alt="中五"></a>
+    <a href="form6/index.html"><img src="covers/form6.jpg" alt="中六"></a>
+  </div>  <footer>
+    Copyright &copy; 中文科教學設計
+  </footer>  <script>
+    document.getElementById("toggle-mode").addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script></body>
+</html>
