@@ -22,12 +22,6 @@
       padding: 0;
     }
 
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: 1px solid #ccc;
-    }
-
     .video-container {
       position: relative;
       padding-bottom: 56.25%;
@@ -38,7 +32,18 @@
     .video-container iframe {
       position: absolute;
       top: 0; left: 0;
-      width: 100%; height: 100%;
+      width: 100%;
+      height: 100%;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
     }
 
     .back {
@@ -66,7 +71,8 @@
 
   <div class="section">
     <h2>筆記 PDF 預覽</h2>
-    <iframe src="../notes/form2_text1.pdf"></iframe>
+    <div id="pdf-viewer"></div>
+    <a href="../notes/form2_text1.pdf" download class="download-btn">下載 PDF 筆記</a>
   </div>
 
   <div class="section">
@@ -77,5 +83,15 @@
   </div>
 
   <a class="back" href="index.html">← 返回中二課文目錄</a>
+
+  <script>
+    const viewer = document.getElementById('pdf-viewer');
+    const pdfUrl = "../notes/form2_text1.pdf";
+    const isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent);
+
+    viewer.innerHTML = isMobile
+      ? `<iframe src="https://docs.google.com/gview?url=https://wlchoi-yyc.github.io/chinese/notes/form2_text1.pdf&embedded=true" style="width:100%; height:600px;" frameborder="0"></iframe>`
+      : `<iframe src="${pdfUrl}" style="width:100%; height:600px;" frameborder="0"></iframe>`;
+  </script>
 </body>
 </html>
