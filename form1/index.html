@@ -12,13 +12,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 .header h1 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .toggle-btn {
@@ -34,12 +37,13 @@
 .grid {
   display: flex;
   justify-content: center;
-  gap: 30px;
   flex-wrap: wrap;
+  gap: 30px;
   margin-top: 30px;
 }
 
 .book-entry {
+  width: 200px;
   text-align: center;
 }
 
@@ -47,11 +51,11 @@
   font-size: 1.2rem;
   margin-bottom: 8px;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .book-entry img {
   width: 100%;
-  max-width: 200px;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
