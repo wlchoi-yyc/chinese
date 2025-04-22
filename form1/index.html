@@ -1,96 +1,86 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
+<!DOCTYPE html><html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>中一課文選單</title>
   <link rel="stylesheet" href="../style.css" />
   <script defer src="../theme.js"></script>
   <style>
-    .header {
-      text-align: center;
-      margin: 30px 0;
-    }
-
-    .toggle-btn {
-      padding: 10px 16px;
-      background-color: #e48b6b;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 40px;
-      padding: 0 20px;
-      max-width: 1000px;
-      margin: 0 auto 50px auto;
-    }
-
-    @media (min-width: 768px) {
-      .grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .card {
-      text-align: center;
-    }
-
-    .card h2 {
-      font-size: 1.3rem;
-      margin-bottom: 15px;
-    }
-
-    .card img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .back-home {
+    .header h1,
+    .header button {
       display: block;
+      margin-left: auto;
+      margin-right: auto;
       text-align: center;
-      margin: 40px 0;
-      font-size: 1.2rem;
-      color: #4b0082;
-      text-decoration: underline;
-    }
+    }.header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.toggle-btn {
+  background-color: #e88b68;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.book-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.book-grid a {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #4b0082;
+}
+
+.book-grid img {
+  width: 180px;
+  height: auto;
+  display: block;
+  margin: 10px auto 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.back-home {
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  color: #4b0082;
+}
+
   </style>
 </head>
 <body>
   <div class="header">
     <h1>中一課文選單</h1>
     <button id="modeToggle" class="toggle-btn">切換日／夜模式</button>
-  </div>
+  </div>  <div class="book-grid">
+    <a href="text1.html">
+      《為學一首示子侄》
+      <img src="../covers/form1_text1.jpg" alt="為學一首示子侄封面">
+    </a>
+    <a href="text2.html">
+      《愚公移山》
+      <img src="../covers/form1_text2.jpg" alt="愚公移山封面">
+    </a>
+    <a href="text3.html">
+      《岳飛之少年時代》
+      <img src="../covers/form1_text3.jpg" alt="岳飛之少年時代封面">
+    </a>
+  </div><a href="../main.html" class="back-home">← 返回主目錄</a>
 
-  <div class="grid">
-    <div class="card">
-      <h2>課文一：《為學一首示子侄》</h2>
-      <a href="text1.html">
-        <img src="../covers/form1_text1.jpg" alt="課文一封面">
-      </a>
-    </div>
-    <div class="card">
-      <h2>課文二：《愚公移山》</h2>
-      <a href="text2.html">
-        <img src="../covers/form1_text2.jpg" alt="課文二封面">
-      </a>
-    </div>
-    <div class="card">
-      <h2>課文三：《岳飛之少年時代》</h2>
-      <a href="text3.html">
-        <img src="../covers/form1_text3.jpg" alt="課文三封面">
-      </a>
-    </div>
-  </div>
-
-  <a href="../main.html" class="back-home">← 返回主目錄</a>
 </body>
 </html>
