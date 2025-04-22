@@ -1,74 +1,82 @@
-<!DOCTYPE html><html lang="zh-Hant">
+<!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>中一課文選單</title>
   <link rel="stylesheet" href="../style.css" />
   <script defer src="../theme.js"></script>
   <style>
-    .header h1,
-    .header button {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+    .header {
       text-align: center;
-    }.header h1 {
-  font-size: 2.2rem;
-  margin-bottom: 15px;
-}
+      margin: 30px 0;
+    }
 
-.toggle-btn {
-  background-color: #e88b68;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-}
+    .toggle-btn {
+      padding: 10px 16px;
+      background-color: #e48b6b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
 
-.book-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
-}
+    .section {
+      text-align: center;
+      margin: 50px 0;
+    }
 
-.book-grid a {
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: underline;
-  color: #4b0082;
-}
+    .section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
 
-.back-home {
-  display: block;
-  text-align: center;
-  margin-top: 40px;
-  font-size: 1.2rem;
-  text-decoration: underline;
-  color: #4b0082;
-}
+    .section img {
+      width: 80%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    }
 
+    .back-home {
+      display: block;
+      text-align: center;
+      margin: 40px 0;
+      font-size: 1.2rem;
+      color: #4b0082;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <div class="header">
     <h1>中一課文選單</h1>
     <button id="modeToggle" class="toggle-btn">切換日／夜模式</button>
-  </div>  <div class="book-grid">
-    <a href="text1.html">
-      <img src="../covers/form1_text1.jpg" alt="為學一首示子侄封面" style="width:180px;"><br>《為學一首示子侄》
-    </a>
-    <a href="text2.html">
-      <img src="../covers/form1_text2.jpg" alt="愚公移山封面" style="width:180px;"><br>《愚公移山》
-    </a>
-    <a href="text3.html">
-      <img src="../covers/form1_text3.jpg" alt="岳飛之少年時代封面" style="width:180px;"><br>《岳飛之少年時代》
-    </a>
-  </div><a href="../main.html" class="back-home">← 返回主目錄</a>
+  </div>
 
+  <div class="section">
+    <h2>課文一：《再論包裝》</h2>
+    <a href="text1.html">
+      <img src="../covers/form1_text1.jpg" alt="課文一封面">
+    </a>
+  </div>
+
+  <div class="section">
+    <h2>課文二：《傷仲永》</h2>
+    <a href="text2.html">
+      <img src="../covers/form1_text2.jpg" alt="課文二封面">
+    </a>
+  </div>
+
+  <div class="section">
+    <h2>課文三：《岳飛之少年時代》</h2>
+    <a href="text3.html">
+      <img src="../covers/form1_text3.jpg" alt="課文三封面">
+    </a>
+  </div>
+
+  <a href="../main.html" class="back-home">← 返回主目錄</a>
 </body>
 </html>
