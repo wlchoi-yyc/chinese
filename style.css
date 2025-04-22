@@ -83,3 +83,21 @@ img {
 button {
   font-family: var(--font-family);
 }
+
+/* 夜間模式設定 */
+body.dark-mode {
+  --bg-color: #1e1e1e;
+  --text-color: #f1f1f1;
+  --link-color: #ffcc00;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.dark-mode a {
+  color: var(--link-color);
+}
+
+body.dark-mode .download-btn {
+  background-color: #444;
+  color: white;
+}
