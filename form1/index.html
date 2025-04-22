@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
+<!DOCTYPE html><html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,100 +8,89 @@
   <style>
     body {
       font-family: "DFKai-SB", "標楷體", "KaiTi", "STKaiti", serif;
-    }
+    }.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
 
-    .header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
+.header h1 {
+  font-size: 1.8rem;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
 
-    .header h1 {
-      font-size: 1.8rem;
-      margin: 0 auto;
-      text-align: center;
-      width: 100%;
-    }
+.toggle-btn {
+  padding: 10px 16px;
+  background-color: #e48b6b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
 
-    .toggle-btn {
-      padding: 10px 16px;
-      background-color: #e48b6b;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
 
-    .grid {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
+.book-entry {
+  text-align: center;
+  flex: 1 1 200px;
+  max-width: 200px;
+}
 
-    .book-entry {
-      text-align: center;
-    }
+.book-title {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: black;
+}
 
-    .book-title {
-      font-size: 1.2rem;
-      margin-bottom: 8px;
-      font-weight: bold;
-      color: black;
-    }
+.book-entry img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
 
-    .book-entry img {
-      width: 100%;
-      max-width: 200px;
-      border-radius: 10px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    }
+.back {
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.2rem;
+  color: #4b0082;
+  text-decoration: underline;
+}
 
-    .back {
-      display: block;
-      text-align: center;
-      margin-top: 40px;
-      font-size: 1.2rem;
-      color: #4b0082;
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .grid {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
   </style>
 </head>
 <body>
   <div class="header">
     <h1>中一課文選單</h1>
     <button id="modeToggle" class="toggle-btn">切換日／夜模式</button>
-  </div>
-
-  <div class="grid">
+  </div>  <div class="grid">
     <div class="book-entry">
       <div class="book-title">課文一：《為學一首示子侄》</div>
       <a href="text1.html"><img src="../covers/form1_text1.jpg" alt="課文一"></a>
-    </div>
+    </div><div class="book-entry">
+  <div class="book-title">課文二：《愚公移山》</div>
+  <a href="text2.html"><img src="../covers/form1_text2.jpg" alt="課文二"></a>
+</div>
 
-    <div class="book-entry">
-      <div class="book-title">課文二：《愚公移山》</div>
-      <a href="text2.html"><img src="../covers/form1_text2.jpg" alt="課文二"></a>
-    </div>
+<div class="book-entry">
+  <div class="book-title">課文三：《岳飛之少年時代》</div>
+  <a href="text3.html"><img src="../covers/form1_text3.jpg" alt="課文三"></a>
+</div>
 
-    <div class="book-entry">
-      <div class="book-title">課文三：《岳飛之少年時代》</div>
-      <a href="text3.html"><img src="../covers/form1_text3.jpg" alt="課文三"></a>
-    </div>
-  </div>
+  </div><a class="back" href="../main.html">← 返回主目錄</a>
 
-  <a class="back" href="../main.html">← 返回主目錄</a>
 </body>
 </html>
