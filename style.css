@@ -14,19 +14,43 @@ body {
   }
 }
 
-h1, h2 {
+h1 {
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 15px;
   color: var(--text-color);
 }
 
-h1 {
-  font-size: 2rem;
-}
-
 @media (min-width: 768px) {
   h1 {
     font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 1.5rem;
   }
 }
 
@@ -75,8 +99,10 @@ img {
 
 .video-container iframe {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 iframe {
