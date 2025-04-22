@@ -1,18 +1,15 @@
-// theme.js
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.getElementById("modeToggle");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const savedTheme = localStorage.getItem("theme");
 
-// 套用儲存中的模式（若有）
-document.addEventListener("DOMContentLoaded", () => {
-  const savedMode = localStorage.getItem("theme");
-  if (savedMode === "dark") {
+  if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
     document.body.classList.add("dark-mode");
   }
 
-  const toggleBtn = document.getElementById("modeToggle");
-  if (toggleBtn) {
-    toggleBtn.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-      const currentMode = document.body.classList.contains("dark-mode") ? "dark" : "light";
-      localStorage.setItem("theme", currentMode);
-    });
-  }
+  toggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    const mode = document.body.classList.contains("dark-mode") ? "dark" : "light";
+    localStorage.setItem("theme", mode);
+  });
 });
