@@ -1,50 +1,48 @@
-/* 全局設定 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap');
+
 body {
-  font-family: 'DFKai-SB', '標楷體', serif;
+  font-family: 'Noto Serif TC', serif;
   margin: 0;
   padding: 0;
   background-color: var(--background-color);
   color: var(--text-color);
-  font-size: 18px;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 1.1rem;
   line-height: 1.8;
 }
 
-/* 主容器置中 */
+:root {
+  --background-color: #fefef6;
+  --text-color: #111;
+}
+
+body.dark {
+  --background-color: #1e1e1e;
+  --text-color: #fefefe;
+}
+
 .container {
-  max-width: 960px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
-/* 標題與段落設定 */
-h1, h2, h3 {
-  font-weight: bold;
-  color: var(--heading-color);
-}
-
-h1 {
-  font-size: 2.5rem;
+h1, h2 {
   text-align: center;
+  font-weight: 700;
+  margin: 30px 0;
 }
 
-h2 {
-  font-size: 1.8rem;
-  margin-top: 40px;
-  margin-bottom: 10px;
+.section {
+  margin: 40px 0;
 }
 
-h3 {
-  font-size: 1.5rem;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-p {
+.section p {
   text-indent: 2em;
-  margin: 10px 0;
+  margin: 0;
+  padding: 0;
 }
 
-/* 圖片網格 */
 .image-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -58,7 +56,6 @@ p {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-/* 視頻區塊 */
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -72,7 +69,6 @@ p {
   width: 100%; height: 100%;
 }
 
-/* PDF 下載按鈕 */
 .download-btn {
   display: inline-block;
   margin-top: 10px;
@@ -83,7 +79,6 @@ p {
   text-decoration: none;
 }
 
-/* 返回連結 */
 .back {
   display: block;
   margin-top: 40px;
@@ -93,32 +88,25 @@ p {
   color: #4b0082;
 }
 
-/* 日夜模式色彩變數 */
-:root {
-  --background-color: #fcfbf5;
-  --text-color: #222;
-  --heading-color: #111;
-}
+/* 桌面版字體放大設定 */
+@media (min-width: 768px) {
+  body {
+    font-size: 1.6rem;
+  }
 
-body.dark-mode {
-  --background-color: #1e1e1e;
-  --text-color: #ddd;
-  --heading-color: #fff;
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
+  .section p {
+    font-size: 1.6rem;
+  }
 
-/* 響應式標題與字體大小 */
-@media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.3rem; }
-  body { font-size: 17px; }
-}
+  .back {
+    font-size: 2rem;
+  }
 
-@media (min-width: 1200px) {
-  h1 { font-size: 2.8rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.6rem; }
-  body { font-size: 19px; }
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
 }
