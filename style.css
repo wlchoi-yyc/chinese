@@ -1,125 +1,36 @@
-body {
-  font-family: "標楷體", "DFKai-SB", "Noto Serif TC", serif;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin: 20px;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  transition: background-color 0.3s, color 0.3s;
-}
+body { font-family: "標楷體", "DFKai-SB", "Noto Serif TC", serif; font-size: 1.1rem; line-height: 1.8; margin: 20px; background-color: var(--background-color); color: var(--text-color); transition: background-color 0.3s, color 0.3s; }
 
-@media (min-width: 768px) {
-  body {
-    font-size: 1.2rem;
-  }
-}
+@media (min-width: 768px) { body { font-size: 1.2rem; } }
 
-h1,
-h2 {
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: var(--text-color);
-}
+h1, h2 { font-weight: bold; margin-bottom: 15px; color: var(--text-color); }
 
-h1 {
-  font-size: 2rem;
-}
+h1 { font-size: 2rem; }
 
-@media (min-width: 768px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-}
+@media (min-width: 768px) { h1 { font-size: 2.5rem; } }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+.container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
 
-.section {
-  margin: 40px 0;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
+.section { margin: 40px 0; max-width: 900px; margin-left: auto; margin-right: auto; }
 
-.section p {
-  text-indent: 2em;
-  margin: 0;
-  padding: 0;
-}
+.section p { text-indent: 2em; margin: 0; padding: 0; }
 
-.image-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  justify-content: center;
-}
+.image-grid { display: grid; grid-template-columns: 1fr; gap: 20px; justify-content: center; }
 
-.image-grid img,
-img {
-  width: 100%;
-  max-width: 800px;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  display: block;
-  margin: 0 auto;
-}
+.image-grid img, img { width: 100%; max-width: 800px; border-radius: 8px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto; }
 
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-}
+.video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
 
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+.video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-iframe {
-  border: 1px solid #ccc;
-}
+iframe { border: 1px solid #ccc; }
 
-.download-btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background-color: #007BFF;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-}
+.download-btn { display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #007BFF; color: white; border-radius: 5px; text-decoration: none; }
 
-.back {
-  display: block;
-  margin-top: 40px;
-  text-align: center;
-  font-size: 1.2rem;
-  text-decoration: underline;
-  color: #4b0082;
-}
+.back { display: block; margin-top: 40px; text-align: center; font-size: 1.2rem; text-decoration: underline; color: #4b0082; }
 
-:root {
-  --background-color: #fefdf9;
-  --text-color: #1a1a1a;
-}
+:root { --background-color: #fefdf9; --text-color: #1a1a1a; }
 
-.dark-mode {
-  --background-color: #1a1a1a;
-  --text-color: #fefdf9;
-}
+.dark-mode { --background-color: #1a1a1a; --text-color: #fefdf9; }
 
-/* ────────────────────────────────────────────────
-   只針對「頁面最頂、直接放在 <body> 下」的
-   第一個 <h1>：強制置中並禁止自動換行
-   ──────────────────────────────────────────────── */
-body > h1:first-of-type {
-  text-align: center !important; /* 無論任何版面或 flex 影響都保持置中 */
-  white-space: nowrap;           /* 標題永遠單行顯示 */
-}
+/* ──────────────────────────────────────────────── 只針對「頁面最頂、直接放在 <body> 下」的第一個 <h1> 強制置中並禁止自動換行 ──────────────────────────────────────────────── / body > h1:first-of-type { width: 100%;               / 讓 text-align:center 真正佔滿整行 / margin: 40px auto 15px;    / 與原排版保持一樣的頂/底距離 / text-align: center !important; / 無論任何版面或 flex 影響都保持置中 / white-space: nowrap;       / 標題永遠單行顯示 */ }
+
