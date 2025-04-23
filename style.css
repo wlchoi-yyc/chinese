@@ -14,7 +14,8 @@ body {
   }
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: bold;
   margin-bottom: 15px;
   color: var(--text-color);
@@ -75,8 +76,10 @@ img {
 
 .video-container iframe {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 iframe {
@@ -110,4 +113,13 @@ iframe {
 .dark-mode {
   --background-color: #1a1a1a;
   --text-color: #fefdf9;
+}
+
+/* ────────────────────────────────────────────────
+   只針對「頁面最頂、直接放在 <body> 下」的
+   第一個 <h1>：強制置中並禁止自動換行
+   ──────────────────────────────────────────────── */
+body > h1:first-of-type {
+  text-align: center !important; /* 無論任何版面或 flex 影響都保持置中 */
+  white-space: nowrap;           /* 標題永遠單行顯示 */
 }
